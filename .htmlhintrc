@@ -1,0 +1,7 @@
+{
+    "attr-lowercase": ["viewBox", "stdDeviation"],
+    "tagname-lowercase": false,
+    "attr-no-duplication": true,
+    "id-unique": true,
+    "doctype-first": false
+}

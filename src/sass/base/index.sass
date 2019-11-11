@@ -1,0 +1,135 @@
+@import reset
+@import typography
+
+.section
+	padding: 65px 30px
+	&--banner
+		padding-top: 170px
+	&--gray
+		background-color: #eff4f4
+	&__title
+		font-weight: 700
+		font-size: 36px
+		line-height: 0.85
+		letter-spacing: 0.75px
+		text-transform: uppercase
+		color: #393e6b
+
+.items
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	counter-reset: section
+
+.item
+	max-width: 20%
+	flex-basis: 20%
+	&--number
+		position: relative
+	&--number::before
+		position: absolute
+		left: -45px
+		font-weight: 700
+		font-size: 150px
+		line-height: 1
+		color: #e1e2e9
+		counter-increment: section
+		content: counter(section)
+	&__link
+		font-weight: 400
+		font-size: 16px
+		line-height: 1.5
+		text-decoration: underline
+		letter-spacing: 0.4px
+		color: #74757b
+	&__icon
+		position: relative
+		display: flex
+		align-items: flex-end
+		min-height: 150px
+	&__icon::before
+		position: absolute
+		align-self: center
+		content: ""
+		background-position: center
+		width: 50px
+		height: 50px
+		background-size: 50px
+	&__icon--notepad::before
+		background-image: url("../img/notepad.png")
+	&__icon--window::before
+		background-image: url("../img/window.png")
+
+.faq
+	&__list
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		margin: 0
+		padding: 0
+		list-style: 0
+	&__item
+		position: relative
+		max-width: 768px
+		width: 100%
+		padding-left: 40px
+		&::before
+			position: absolute
+			top: 5px
+			left: 0
+			display: block
+			width: 8px
+			height: 8px
+			content: ""
+			background-color: #3b4269
+			border-radius: 50%
+	&__title
+		font-weight: 400
+		font-size: 24px
+		line-height: 1.5
+		letter-spacing: 0.4px
+		text-decoration: underline
+		color: #0da088
+	&__desc
+		font-weight: 400
+		color: #74757b
+
+.step
+	display: flex
+	align-items: center
+	min-height: 75px
+	margin-bottom: 15px
+	&__icon
+		position: relative
+		padding-left: 110px
+	&__icon::before
+		position: absolute
+		top: 0
+		left: 0
+		display: block
+		width: 74px
+		height: 74px
+		content: ""
+		background-color: #2cd3b8
+		background-position: center
+		background-repeat: no-repeat
+		border-radius: 50%
+	&__icon--add-user::before
+		background-image: url("../img/add-user.png")
+		background-size: 35px 25px
+	&__icon--arrow::before
+		background-image: url("../img/arrow.png")
+		background-size: 29px 23px
+	&__icon--cogs::before
+		background-image: url("../img/cogs.png")
+		background-size: 36px
+	&__icon--webin::before
+		background-image: url("../img/webin.png")
+		background-size: 40px 26px
+	&__icon--manager::before
+		background-image: url("../img/manager.png")
+		background-size: 32px 37px
+	&__icon--screen::before
+		background-image: url("../img/screen.png")
+		background-size: 32px 29px
+
