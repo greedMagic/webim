@@ -119,35 +119,12 @@ title: Index page
       <h1 class="section__title">Что вас ждет после установки</h1>
       <p class="section__text">Идейные соображения высшего порядка, а также сложившаяся структура организации позволяет</p>
       <ul class="steps">
-        <li class="step step__icon step__icon--add-user">
-          <span class="step__inner">
-            <b class="step__title">Шаг 1.</b> Создание учетной записи компании и администратора</li>
-          </span>
-        <li class="step step__icon step__icon--arrow">
-          <span class="step__inner">
-            <b class="step__title">Шаг 2.</b> Активация учетной записи
-          </span>
-        </li>
-        <li class="step step__icon step__icon--cogs">
-          <span class="step__inner">
-            <b class="step__title">Шаг 3.</b> Начальная настройка
-          </span>
-        </li>
-        <li class="step step__icon step__icon--webin">
-          <span class="step__inner">
-            <b class="step__title">Шаг 4.</b> Установка кнопки Webim на сайт
-          </span>
-        </li>
-        <li class="step step__icon step__icon--manager">
-          <span class="step__inner">
-            <b class="step__title">Шаг 5.</b> Регистрация оператора
-          </span>
-        </li>
-        <li class="step step__icon step__icon--screen">
-          <span class="step__inner">
-            <b class="step__title">Шаг 6.</b> Тест сервиса
-          </span>
-        </li>
+        <li class="step step__icon step__icon--add-user">Создание учетной записи компании и администратора</li>
+        <li class="step step__icon step__icon--arrow">Активация учетной записи</li>
+        <li class="step step__icon step__icon--cogs">Начальная настройка</li>
+        <li class="step step__icon step__icon--webin"> Установка кнопки Webim на сайт</li>
+        <li class="step step__icon step__icon--manager">Регистрация оператора</li>
+        <li class="step step__icon step__icon--screen">Тест сервиса</li>
       </ul>
       <div class="section__buttons">
         <a class="button button--green" href="#">Все возможности Webim</a>
@@ -173,7 +150,7 @@ title: Index page
 
   {% include "partials/_footer.html" %}
 
-	{# mixin example #}
+	<!-- {# mixin example #}
 	{{mixins.icon('facebook')}}
 
 
@@ -183,6 +160,6 @@ title: Index page
 		{% for test in tests.list %}
 		<li>{{test.title}}</li>
 		{% endfor %}
-	{# end of example #}
+	{# end of example #} -->
 
 {% endblock %}

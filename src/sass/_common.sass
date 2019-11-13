@@ -6,6 +6,30 @@ body
 	letter-spacing: 0.4px
 	color: #74757b
 
+.page
+	&__wrap
+		position: relative
+		display: flex
+		flex-direction: column
+		margin: 0
+		padding: 0
+		overflow: hidden
+
+.container
+	max-width: 1024px
+	margin: 0 auto
+
+.visually-hidden
+	position: absolute
+	padding: 0
+	width: 1px
+	height: 1px
+	border: 0
+	overflow: hidden
+	clip: rect(1px 1px 1px 1px) /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px)
+
+
 .button
 	display: inline-flex
 	align-items: center
@@ -32,6 +56,133 @@ body
 		background-color: #3b4269
 		border: 0
 
-.container
-	max-width: 1024px
-	margin: 0 auto
+.header
+	position: relative
+	z-index: 100
+	background-color: #ffffff
+	box-shadow: 0 3px 7px rgba(0, 0, 2, 0.25)
+	&--fixed
+		position: fixed
+		top: 0
+		right: 0
+		left: 0
+	&__nav
+		max-width: 1600px
+		padding: 0 15px
+		margin: 0 auto
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		align-items: baseline
+	&__menu
+		padding: 25px 15px
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		flex-grow: 1
+
+.menu
+	&__list
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		list-style: none
+	&__link
+		display: flex
+		padding: 15px
+		font-weight: 400
+		font-size: 18px
+		line-height: 1.1
+		color: #393e6b
+		text-decoration: none
+		text-transform: uppercase
+	&__user
+		margin-right: auto
+
+.logo
+	&__link
+		display: flex
+		padding: 15px
+		line-height: 1
+		text-decoration: none
+	&__pic
+		display: block
+		line-height: 1
+	&__copyright
+		display: inline-block
+		font-weight: 400
+		font-size: 14px
+		line-height: 1.25
+
+.footer
+	color: #b6b9c9
+	&__wrap
+		max-width: 1600px
+		margin: 0 auto
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+	&__col
+		max-width: 25%
+		flex-basis: 25%
+	background-color: #393e6b
+
+.telephone
+	&__link
+		font-weight: 400
+		font-size: 22px
+		line-height: 1
+		letter-spacing: 0.22px
+		text-decoration: none
+		color: #ffffff
+		&--big
+			font-size: 26px
+			line-height: 1
+	&__icon
+		position: relative
+		padding-left: 40px
+		min-height: 30px
+		&::before
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			width: 30px
+			height: 30px
+			content: ""
+			background-image: url("../img/phone.png")
+			background-repeat: no-repeat
+			background-position: center
+			background-size: 100%
+	&__desc
+		display: block
+		font-weight: 400
+		font-size: 16px
+		line-height: 1.5
+		letter-spacing: 0.22px
+
+.social
+	&__icon
+		display: block
+		width: 40px
+		height: 40px
+		background-repeat: no-repeat
+		background-position: center
+		&--vk
+			background-image: url("../img/social-vk.png")
+			background-size: 24px 14px
+		&--fb
+			background-image: url("../img/social-fb.png")
+			background-size: 11px 21px
+		&--tw
+			background-image: url("../img/social-tw.png")
+			background-size: 22px 19px
+		&--skype
+			background-image: url("../img/social-skype.png")
+			background-size: 20px
+
+.socials
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: flex-start
