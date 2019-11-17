@@ -26,15 +26,14 @@ body
 	height: 1px
 	border: 0
 	overflow: hidden
-	clip: rect(1px 1px 1px 1px) /* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px)
-
 
 .button
 	display: inline-flex
 	align-items: center
 	justify-content: center
-	padding: 5px 25px
+	padding: 15px 25px
+	vertical-align: middle
 	min-height: 48px
 	min-width: 255px
 	font-weight: 700
@@ -47,6 +46,12 @@ body
 	border: 1px solid #393e6b
 	border-radius: 24px
 	background-color: transparent
+	transition: all ease-out 0.3s
+	&:focus,
+	&:hover
+		opacity: 0.75
+	&:active
+		opacity: 0.35
 	&--green
 		color: #ffffff
 		background-color: #2cd3b8
@@ -55,6 +60,31 @@ body
 		color: #ffffff
 		background-color: #3b4269
 		border: 0
+	@media (max-width: 420px) and (orientation:portrait)
+		max-width: 100%
+		width: 100%
+
+.link
+	transition: all ease-out 0.3s
+	&:focus,
+	&:hover
+		opacity: 0.75
+	&:active
+		opacity: 0.35
+
+.logo
+	&__link
+		display: flex
+		line-height: 1
+		text-decoration: none
+	&__link[href]:focus,
+	&__link[href]:hover
+		opacity: 0.75
+	&__link[href]:active
+		opacity: 0.35
+	&__pic
+		display: block
+		line-height: 1
 
 .header
 	position: relative
@@ -68,54 +98,110 @@ body
 		left: 0
 	&__nav
 		max-width: 1600px
-		padding: 0 15px
 		margin: 0 auto
 		display: flex
 		flex-direction: row
 		flex-wrap: wrap
 		align-items: baseline
+		@media (max-width: 1023px)
+			justify-content: center
+
+	&__logo
+		padding: 15px 30px
+		@media (min-width: 1023px) and (max-width: 1200px)
+			display: none
+
 	&__menu
-		padding: 25px 15px
-		display: flex
-		flex-direction: row
-		flex-wrap: wrap
 		flex-grow: 1
+		@media (max-width: 1023px)
+			flex-grow: 0
 
 .menu
+	&__button
+		display: none
+		width: 50px
+		height: 50px
+		background-color: transparent
+		background-image: url("../img/menu.svg")
+		background-position: center
+		background-repeat: no-repeat
+		background-size: 40px
+		@media (max-width: 1023px)
+			position: absolute
+			top: 4px
+			right: 4px
+			z-index: 200
+			display: block
+
+		&--closed
+			background-image: url("../img/closed.svg")
+
+
 	&__list
 		display: flex
 		flex-direction: row
 		flex-wrap: wrap
 		list-style: none
+		@media (max-width: 1023px)
+			padding: 30px 0
+			flex-direction: column
+
 	&__link
 		display: flex
 		padding: 15px
 		font-weight: 400
 		font-size: 18px
 		line-height: 1.1
-		color: #393e6b
+		letter-spacing: 0.9px;
 		text-decoration: none
 		text-transform: uppercase
+		color: #393e6b
+		&:focus,
+		&:hover
+			opacity: 0.75
+		&:active
+			opacity: 0.35
+
+		@media (max-width: 1023px)
+			padding: 15px 30px
+
 	&__user
 		margin-right: auto
 
-.logo
-	&__link
+	&__wrap
+		padding: 25px 15px
 		display: flex
-		padding: 15px
-		line-height: 1
-		text-decoration: none
-	&__pic
-		display: block
-		line-height: 1
-	&__copyright
-		display: inline-block
-		font-weight: 400
-		font-size: 14px
-		line-height: 1.25
+		flex-direction: row
+		flex-wrap: wrap
+		flex-grow: 1
+		background-color: #ffffff
+		@media (max-width: 1023px)
+			position: absolute
+			top: 0
+			left: -100%
+			display: flex
+			width: 100%
+			flex-direction: column-reverse
+			justify-content: center
+			min-height: 100vh
+		@media (max-width: 1023px) and (orientation:landscape)
+			flex-direction: row-reverse
+
+	&__dropdown
+		transition: left ease-out .75s
+		&--active
+			left: 0
+
+.copyright
+	display: block
+	font-weight: 400
+	font-size: 14px
+	line-height: 1.25
 
 .footer
+	padding: 35px 15px 45px
 	color: #b6b9c9
+	background-color: #393e6b
 	&__wrap
 		max-width: 1600px
 		margin: 0 auto
@@ -123,12 +209,46 @@ body
 		flex-direction: row
 		flex-wrap: wrap
 	&__col
+		max-width: 20%
+		flex-basis: 20%
+		padding: 15px 15px 0
+		@media (max-width: 1023px)
+			max-width: 100%
+			flex-basis: 100%
+
+	&__telephone
+		max-width: 55%
+		flex-basis: 55%
+		flex-grow: 1
+		padding-left: 50px
+		@media (max-width: 1023px)
+			display: none
+
+	&__info
 		max-width: 25%
 		flex-basis: 25%
-	background-color: #393e6b
+		padding-left: 45px
+		margin-left: auto
+		flex-grow: 1
+		@media (max-width: 1023px)
+			display: none
+
+	&__logo
+		padding: 5px 15px
+		margin-bottom: 15px
+	&__copyright
+		padding: 5px 15px 15px
+	&__link
+		color: #ffffff
+	&__week
+		display: block
+		margin: 8px 0 12px
+		letter-spacing: 0.16px
 
 .telephone
 	&__link
+		display: block
+		padding: 10px 0
 		font-weight: 400
 		font-size: 22px
 		line-height: 1
@@ -144,8 +264,8 @@ body
 		min-height: 30px
 		&::before
 			position: absolute
-			top: 0
-			left: 0
+			top: 9px
+			left: 1px
 			display: block
 			width: 30px
 			height: 30px
@@ -155,6 +275,8 @@ body
 			background-position: center
 			background-size: 100%
 	&__desc
+		margin-top: -5px
+		margin-bottom: 10px
 		display: block
 		font-weight: 400
 		font-size: 16px
@@ -164,22 +286,27 @@ body
 .social
 	&__icon
 		display: block
-		width: 40px
-		height: 40px
+		width: 30px
+		height: 30px
+		margin-right: 10px
 		background-repeat: no-repeat
 		background-position: center
 		&--vk
 			background-image: url("../img/social-vk.png")
 			background-size: 24px 14px
+			background-position: left 0px center
 		&--fb
 			background-image: url("../img/social-fb.png")
 			background-size: 11px 21px
+			background-position: left 7px center
 		&--tw
 			background-image: url("../img/social-tw.png")
 			background-size: 22px 19px
+			background-position: left 0px center
 		&--skype
 			background-image: url("../img/social-skype.png")
 			background-size: 20px
+			background-position: left 2px center
 
 .socials
 	display: flex

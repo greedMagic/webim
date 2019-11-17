@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Index page</title>
+    <title>Template</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fff" />
@@ -13,207 +13,200 @@
   <body class="page">
     <!-- BEGIN content -->
     <div class="page__wrap">
-      <!-- <h1>Index page</h1> -->
       <header class="header header--fixed">
         <nav class="header__nav">
           <div class="header__menu menu">
-            <ul class="menu__list menu__user">
-              <li class="menu__item">
-                <a class="menu__link" href="#">Вход</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Регистрация</a>
-              </li>
-            </ul>
-            <ul class="menu__list menu__main-menu">
-              <li class="menu__item">
-                <a class="menu__link" href="#">Возможности</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Тарифы</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Партнёрам</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Помощь</a>
-              </li>
-            </ul>
+            <button class="menu__button"></button> <!-- закрыть меню `menu__button--closed` -->
+            <div class="menu__wrap menu__dropdown">
+              <!-- выпадающий список `menu__dropdown--active` -->
+              <ul class="menu__list menu__user">
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Вход</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Регистрация</a>
+                </li>
+              </ul>
+              <ul class="menu__list menu__main-menu">
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Возможности</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Тарифы</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Партнёрам</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Помощь</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <a class="header__logo logo logo__link" href="#">
             <img class="logo__pic" src="img/logo-header.png" alt="Логотип Webim">
           </a>
         </nav>
       </header>
-      <!-- // Header -->
-      <section class="section section--banner section--gray">
+      <section class="banner banner--gray">
         <div class="container">
-          <h1 class="section__title">Установка webim</h1>
-          <p class="section__text"> Установка онлайн-консультанта Webim на ваш сайт не займет много времени. <br> Вы можете установить онлайн-консультант Webim на ваш сайт и протестировать его в течение 7 дней бесплатно. </p>
-          <div class="section__buttons">
-            <a class="button button--green" href="#">Попробовать бесплатно</a>
-            <a class="button" href="#">Тарифы</a>
+          <h1 class="banner__title title title--big">Установка webim</h1>
+          <p class="banner__text text"> Установка онлайн-консультанта Webim на ваш сайт не займет много времени. <br> Вы можете установить онлайн-консультант Webim на ваш сайт и протестировать его в течение 7 дней бесплатно. </p>
+          <a class="banner__button button button--green" href="#">Попробовать бесплатно</a>
+          <a class="banner__button button" href="#">Тарифы</a>
+        </div>
+      </section>
+      <section class="easy-setup">
+        <div class="container">
+          <h1 class="easy-setup__title title">Простая установка</h1>
+          <p class="easy-setup__text text"> Установка онлайн-консультанта Webim не займет более 15 минут </p>
+          <ul class="easy-setup__items">
+            <li class="easy-setup__item">
+              <a class="easy-setup__link easy-setup__icon easy-setup__icon--notepad link" href="#">Регистрация</a>
+            </li>
+            <li class="easy-setup__item">
+              <a class="easy-setup__link easy-setup__icon easy-setup__icon--window link" href="#">Установка HTML-кода</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="faq-section faq-section--gray">
+        <div class="container">
+          <h1 class="faq-section__title title">Установка html-кода</h1>
+          <div class="faq-section__faq faq">
+            <ul class="faq__list">
+              <li class="faq__item">
+                <a href="#" class="faq__title link">Установка HTML-кода Webim для сайтов на Joomla</a>
+                <p class="faq__desc">Документация по внедрению сервиса Webim на сайтах, построенных на базе <b>CMS Joomla</b>.</p>
+              </li>
+              <li class="faq__item">
+                <a href="#" class="faq__title link">Установка HTML-кода Webim для сайтов на Wordrpess</a>
+                <p class="faq__desc">Документация по внедрению сервиса Webim на сайтах, построенных на базе <b>Wordrpess</b>.</p>
+              </li>
+              <li class="faq__item">
+                <a href="#" class="faq__title link">Установка HTML-кода Webim для сайтов на uCoz.ru</a>
+                <p class="faq__desc">Документация по внедрению сервиса Webim на сайтах, построенных на базе <b>uCoz.ru</b>.</p>
+              </li>
+              <li class="faq__item">
+                <a href="#" class="faq__title link">Установка HTML-кода Webim для сайтов на webasyst.ru</a>
+                <p class="faq__desc">Документация по внедрению сервиса Webim на сайтах, построенных на базе <b>webasyst.ru</b>.</p>
+              </li>
+              <li class="faq__item">
+                <a href="#" class="faq__title link">Установка HTML-кода Webim для любого сайта</a>
+                <p class="faq__desc">Документация по внедрению сервиса Webim на сайтах с другой CMS или написанных вручную.</p>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
-      <section class="section">
+      <section class="faq-section">
         <div class="container">
-          <h1 class="section__title">Простая установка</h1>
-          <p class="section__text"> Установка онлайн-консультанта Webim не займет более 15 минут </p>
-          <ul class="items">
-            <li class="item item--number">
-              <a class="item__link item__icon item__icon--notepad" href="#">Регистрация</a>
-            </li>
-            <li class="item item--number">
-              <a class="item__link item__icon item__icon--window" href="#">Установка HTML-кода</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="section section--gray">
-        <div class="container">
-          <h1 class="section__title">Установка html-кода</h1>
-          <ul class="faq faq__list">
-            <li class="faq__item">
-              <a href="#" class="faq__title faq__link">Установка HTML-кода Webim для сайтов на Joomla</a>
-              <p class="faq__desc">Документация по внедрению сервиса Webim на сайтах, построенных на базе CMS Joomla.</p>
-            </li>
-            <li class="faq__item">
-              <a href="#" class="faq__title faq__link">Установка HTML-кода Webim для сайтов на Wordrpess</a>
-              <p class="faq__desc">Документация по внедрению сервиса Webim на сайтах, построенных на базе Wordrpess.</p>
-            </li>
-            <li class="faq__item">
-              <a href="#" class="faq__title faq__link">Установка HTML-кода Webim для сайтов на uCoz.ru</a>
-              <p class="faq__desc">Документация по внедрению сервиса Webim на сайтах, построенных на базе uCoz.ru.</p>
-            </li>
-            <li class="faq__item">
-              <a href="#" class="faq__title faq__link">Установка HTML-кода Webim для сайтов на webasyst.ru</a>
-              <p class="faq__desc">Документация по внедрению сервиса Webim на сайтах, построенных на базе webasyst.ru.</p>
-            </li>
-            <li class="faq__item">
-              <a href="#" class="faq__title faq__link">Установка HTML-кода Webim для любого сайта</a>
-              <p class="faq__desc">Документация по внедрению сервиса Webim на сайтах с другой CMS или написанных вручную.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="section">
-        <div class="container">
-          <h1 class="section__title"> Установка приложения <br> для операторов webim dashboard </h1>
-          <p class="section__text">Чтобы быть на связи с клиентами всегда, установите приложение Webim Dashboard</p>
-          <ul class="faq faq__list">
-            <li class="faq__item">
-              <a href="#" class="faq__title faq__link">Установка приложения Webim Dashboard для iPhone</a>
-              <p class="faq__desc"> Документация по установке дополнительного программного обеспечения для операторов сервиса Webim, использующих iPhone/iPad/etc от компании Apple. </p>
-            </li>
-            <li class="faq__item">
-              <a href="#" class="faq__title faq__link">Установка приложения Webim Dashboard для Android</a>
-              <p class="faq__desc"> Документация по установке дополнительного программного обеспечения для операторов сервиса Webim, использующих платформу Google Android. </p>
-            </li>
-            <li class="faq__item">
-              <a href="#" class="faq__title faq__link">Установка приложения Webim Dashboard для Ubuntu</a>
-              <p class="faq__desc"> Документация по установке дополнительного программного обеспечения для операторов  сервиса Webim, использующих платформу Ubuntu. </p>
-            </li>
-            <li class="faq__item">
-              <a href="#" class="faq__title faq__link">Установка приложения Webim Dashboard</a>
-              <p class="faq__desc"> Документация по установке дополнительного программного обеспечения для операторов сервиса Webim под ОС Microsoft Windows. </p>
-            </li>
-            <li class="faq__item">
-              <a href="#" class="faq__title faq__link">Создание приложения Webim для Mac OS </a>
-              <p class="faq__desc"> Пошаговая инструкция создания приложения для оператора Webim для Mac OS с помощью Fluid </p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="section section--gray">
-        <div class="container">
-          <h1 class="section__title">Что вас ждет после установки</h1>
-          <p class="section__text">Идейные соображения высшего порядка, а также сложившаяся структура организации позволяет</p>
-          <ul class="steps">
-            <li class="step step__icon step__icon--add-user">Создание учетной записи компании и администратора</li>
-            <li class="step step__icon step__icon--arrow">Активация учетной записи</li>
-            <li class="step step__icon step__icon--cogs">Начальная настройка</li>
-            <li class="step step__icon step__icon--webin"> Установка кнопки Webim на сайт</li>
-            <li class="step step__icon step__icon--manager">Регистрация оператора</li>
-            <li class="step step__icon step__icon--screen">Тест сервиса</li>
-          </ul>
-          <div class="section__buttons">
-            <a class="button button--green" href="#">Все возможности Webim</a>
-            <a class="button button--blue" href="#">Протестировать бесплатно</a>
+          <h1 class="faq-section__title title"> Установка приложения <br> для операторов webim dashboard </h1>
+          <p class="faq-section__text text">Чтобы быть на связи с клиентами всегда, установите приложение Webim Dashboard</p>
+          <div class="faq-section__faq faq">
+            <ul class="faq__list">
+              <li class="faq__item">
+                <a href="#" class="faq__title link">Установка приложения Webim Dashboard для iPhone</a>
+                <p class="faq__desc"> Документация по установке дополнительного программного обеспечения для операторов  <br>
+                  <b>сервиса Webim</b>, использующих iPhone/iPad/etc от компании Apple. </p>
+              </li>
+              <li class="faq__item">
+                <a href="#" class="faq__title link">Установка приложения Webim Dashboard для Android</a>
+                <p class="faq__desc"> Документация по установке дополнительного программного обеспечения для операторов  <br>
+                  <b>сервиса Webim</b>, использующих платформу Google Android. </p>
+              </li>
+              <li class="faq__item">
+                <a href="#" class="faq__title link">Установка приложения Webim Dashboard для Ubuntu</a>
+                <p class="faq__desc"> Документация по установке дополнительного программного обеспечения для операторов  <br>
+                  <b>сервиса Webim</b>, использующих платформу Ubuntu. </p>
+              </li>
+              <li class="faq__item">
+                <a href="#" class="faq__title link">Установка приложения Webim Dashboard</a>
+                <p class="faq__desc"> Документация по установке дополнительного программного обеспечения для операторов  <br>
+                  <b>сервиса Webim</b> под ОС Microsoft Windows. </p>
+              </li>
+              <li class="faq__item">
+                <a href="#" class="faq__title link">Создание приложения Webim для Mac OS </a>
+                <p class="faq__desc"> Пошаговая инструкция создания приложения для оператора Webim для Mac OS с помощью Fluid </p>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
-      <section class="section">
+      <section class="finish-setup finish-setup--gray">
         <div class="container">
-          <p class="section__text">Webim – это не только онлайн-консультант. Интегрируйте и другие каналы, чтобы клиенты могли обращаться к вам любым удобным способом</p>
-          <div class="links">
-            <a class="link link__icon link__icon--share" href="#">Социальные сети</a>
-            <a class="link link__icon link__icon--arrow" href="#">Форма обратной связи</a>
-            <a class="link link__icon link__icon--mobile" href="#">Чат в вашем мобильном приложении</a>
-            <a class="link link__icon link__icon--message" href="#">Мессенджеры</a>
-            <a class="link link__icon link__icon--cube" href="#">Яндекс.Диалоги</a>
-            <a class="link link__icon link__icon--mail" href="#">Электронная почта</a>
-            <a class="link link__icon link__icon--bot" href="#">Чат-боты</a>
+          <h1 class="finish-setup__title title">Что вас ждет после установки</h1>
+          <p class="finish-setup__text text">Идейные соображения высшего порядка, а также сложившаяся структура организации позволяет</p>
+          <ul class="finish-setup__steps">
+            <li class="finish-setup__step finish-setup__icon finish-setup__icon--add-user">Создание учетной записи компании и администратора</li>
+            <li class="finish-setup__step finish-setup__icon finish-setup__icon--arrow">Активация учетной записи</li>
+            <li class="finish-setup__step finish-setup__icon finish-setup__icon--cogs">Начальная настройка</li>
+            <li class="finish-setup__step finish-setup__icon finish-setup__icon--webin"> Установка кнопки Webim на сайт</li>
+            <li class="finish-setup__step finish-setup__icon finish-setup__icon--manager">Регистрация оператора</li>
+            <li class="finish-setup__step finish-setup__icon finish-setup__icon--screen">Тест сервиса</li>
+          </ul>
+          <a class="finish-setup__button button button--green" href="#">Все возможности Webim</a>
+          <a class="finish-setup__button button button--blue" href="#">Протестировать бесплатно</a>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="container">
+          <p class="contact__text text">Webim – это не только онлайн-консультант. Интегрируйте и другие каналы, чтобы клиенты могли обращаться к вам любым удобным способом</p>
+          <div class="contact__links">
+            <a class="contact__link contact__icon contact__icon--share link" href="#">Социальные сети</a>
+            <a class="contact__link contact__icon contact__icon--arrow link" href="#">Форма обратной связи</a>
+            <a class="contact__link contact__icon contact__icon--mobile link" href="#">Чат в вашем <br> мобильном приложении</a>
+            <a class="contact__link contact__icon contact__icon--message link" href="#">Мессенджеры</a>
+            <a class="contact__link contact__icon contact__icon--cube link" href="#">Яндекс.Диалоги</a>
+            <a class="contact__link contact__icon contact__icon--mail link" href="#">Электронная почта</a>
+            <a class="contact__link contact__icon contact__icon--bot link" href="#">Чат-боты</a>
           </div>
         </div>
       </section>
       <footer class="footer">
         <div class="footer__wrap">
           <div class="footer__col">
-            <div class="logo">
-              <img class="logo__pic" src="img/logo-footer.png" alt="Логотип Webin">
-              <span class="logo__copyright"> Webim 2008-2017 <br> Все права защищены </span>
-            </div>
+            <a class="footer__logo logo logo__link" href="#">
+              <img class="logo__pic" src="img/logo-footer.png" alt="Логотип Webim">
+            </a>
+            <span class="footer__copyright copyright"> Webim 2008-2017 <br> Все права защищены </span>
           </div>
-          <div class="footer__col">
+          <div class="footer__col footer__telephone">
             <div class="telephone">
-              <a class="telephone__link telephone__link--big telephone__icon" href="#">+7 (800) 500-49-32</a>
+              <a class="telephone__link telephone__link--big telephone__icon link" href="#">+7 (800) 500-49-32</a>
             </div>
             <div class="telephone">
-              <a class="telephone__link" href="#">+7 (499) 322-37-54</a>
+              <a class="telephone__link link" href="#">+7 (499) 322-37-54</a>
               <span class="telephone__desc">Москва, Серебряническая набережная, 29</span>
             </div>
             <div class="telephone">
-              <a class="telephone__link" href="#">+7 (812) 385-53-37</a>
+              <a class="telephone__link link" href="#">+7 (812) 385-53-37</a>
               <span class="telephone__desc">Санкт-Петербург, Чкаловский проспект, 15</span>
             </div>
           </div>
-          <div class="footer__col">
-            <a class="link link--footer-mail" href="mail:contact@webim.ru">contact@webim.ru</a>
-            <a class="link link--footer-mail" href="mail:sales@webim.ru">sales@webim.ru</a>
-            <span class="footer__desc">понедельник - пятница с 10.00 - 18.00</span>
+          <div class="footer__col footer__info">
+            <a class="footer__link link link__mail" href="mail:contact@webim.ru">contact@webim.ru</a>
+            <br>
+            <a class="footer__link link link__mail" href="mail:sales@webim.ru">sales@webim.ru</a>
+            <br>
+            <span class="footer__week">понедельник - пятница с 10.00 - 18.00</span>
             <div class="socials">
-              <a class="social social__icon social__icon--vk" href="#">
+              <a class="link social social__icon social__icon--vk" href="#">
                 <span class="visually-hidden">Vk</span>
               </a>
-              <a class="social social__icon social__icon--fb" href="#">
+              <a class="link social social__icon social__icon--fb" href="#">
                 <span class="visually-hidden">Fb</span>
               </a>
-              <a class="social social__icon social__icon--tw" href="#">
+              <a class="link social social__icon social__icon--tw" href="#">
                 <span class="visually-hidden">Tw</span>
               </a>
-              <a class="social social__icon social__icon--skype" href="#">
+              <a class="link social social__icon social__icon--skype" href="#">
                 <span class="visually-hidden">Skype</span>
               </a>
             </div>
           </div>
         </div>
       </footer>
-      <!-- 
-	
-<svg class="icon icon-facebook"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
-
-
-
-	
-		
-
-		
-		<li>Item1</li>
-		
-		<li>Item2</li>
-		
-	 -->
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
