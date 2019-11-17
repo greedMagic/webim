@@ -2,320 +2,422 @@
 @import typography
 
 .banner
-	padding: 175px 30px 48px
-	&--gray
-		background-color: #eff4f4
-	&__title
-		margin-bottom: 32px
-	&__text
-		max-width: 650px
-		margin-bottom: 55px
-	&__button
-		margin-right: 20px
-		margin-bottom: 20px
+	padding: 125px 15px 50px
+	+media-sm
+		padding: 120px 30px 45px
+	+media-md
+		padding: 125px 30px 45px
+	+media-lg
+		padding: 155px 30px 65px
+	+media-xl
+		padding: 175px 30px 48px
+
+.banner--gray
+	background-color: #eff4f4
+
+.banner__title
+	margin-bottom: 32px
+	font-size: 36px
+	line-height: 1.1
+	letter-spacing: 0.9px;
+	+media-xs
+		margin-bottom: 30px
+		font-size: 30px
+
+.banner__text
+	max-width: 650px
+	margin-bottom: 55px
+	+media-xs
+		margin-bottom: 35px
+	+media-sm
+		margin-bottom: 45px
+
+.banner__button
+	margin: 0 20px 20px 0
+	+media-xs
+		margin-right: 0
 
 .easy-setup
 	padding: 67px 30px 17px
-	&__title
-		margin-bottom: 16px
-	&__text
-		margin-bottom: 15px
-	&__items
-		display: flex
+	+media-xs
+		padding: 45px 15px 25px
+
+.easy-setup__title
+	margin-bottom: 16px
+	+media-xs
+		margin-bottom: 10px
+
+.easy-setup__text
+	margin-bottom: 15px
+
+.easy-setup__items
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	counter-reset: item
+	margin: 45px 0
+	+media-xs
+		margin: 0
+	+media-sm
+		margin: 20px 0 25px
+	+media-md
+		margin: 25px 0 35px
+
+.easy-setup__item
+	position: relative
+	max-width: 25%
+	flex-basis: 25%
+	margin-bottom: 22px
+	+media-xs
+		max-width: 100%
+		flex-basis: 100%
+	+media-sm
+		max-width: 50%
+		flex-basis: 50%
+	+media-md
+		max-width: 33.33333333%
+		flex-basis: 33.33333333%
+
+.easy-setup__item::before
+	position: absolute
+	top: 10px
+	left: -50px
+	font-weight: 700
+	font-size: 150px
+	line-height: 1
+	color: #e1e2e9
+	counter-increment: item
+	content: counter(item)
+	+media-xs
+		top: 0px
+		left: 5px
+		font-size: 40px
+	+media-sm
+		top: 75px
+		left: -30px
+		font-size: 50px
+	+media-md
+		top: 65px
+		left: -35px
+		font-size: 65px
+	+media-lg
+		top: 70px
+		left: -30px
+		font-size: 55px
+
+.easy-setup__link
+	font-weight: 400
+	font-size: 18px
+	line-height: 1.5
+	text-decoration: underline
+	letter-spacing: 0.45px
+	color: #0da088
+
+.easy-setup__icon
+	position: relative
+	display: flex
+	flex-direction: column
+	+media-xs
 		flex-direction: row
-		flex-wrap: wrap
-		counter-reset: item
-		margin: 45px 0
-	&__item
-		position: relative
-		max-width: 25%
-		flex-basis: 25%
-		margin-bottom: 22px
-		@media (max-width: 800px) and (orientation:portrait)
-			margin-bottom: 35px
+		align-items: center
 
-		&::before
-			position: absolute
-			top: 10px
-			left: -50px
-			font-weight: 700
-			font-size: 150px
-			line-height: 1
-			color: #e1e2e9
-			counter-increment: item
-			content: counter(item)
-			@media (max-width: 800px) and (orientation:portrait)
-				top: -15%
-				left: 35%
-			@media (max-width: 800px) and (orientation:landscape)
-				top: -15%
-				left: -11%
-		&:nth-of-type(odd)::before
-			@media (max-width: 800px) and (orientation:portrait)
-				left: 65%
+.easy-setup__icon::before
+	height: 85px
+	width: 80px
+	content: ""
+	background-size: 50px
+	background-repeat: no-repeat
+	background-position: left 0 center
+	+media-xs
+		height: 75px
+		width: 80px
+		background-position: center
+	+media-xl
+		margin-bottom: 4px
+		height: 160px
+		width: 100%
+		background-position: left 0 top 77px
 
+.easy-setup__icon--notepad::before
+	background-image: url("../img/notepad.png")
 
-		@media (max-width: 420px)
-			max-width: 100%
-			flex-basis: 100%
-
-		@media (min-width: 420px) and (max-width: 800px)
-			max-width: 50%
-			flex-basis: 50%
-
-	&__link
-		font-weight: 400
-		font-size: 18px
-		line-height: 1.5
-		text-decoration: underline
-		letter-spacing: 0.45px
-		color: #0da088
-	&__icon
-		position: relative
-		display: flex
-		flex-direction: column
-		&::before
-			margin-bottom: 4px
-			width: 100%
-			height: 160px
-			content: ""
-			background-size: 50px
-			background-repeat: no-repeat
-			background-position: left 0 top 77px
-			@media (max-width: 800px)
-				height: 80px
-				background-position: left 0 center
-
-		&--notepad::before
-			background-image: url("../img/notepad.png")
-		&--window::before
-			background-image: url("../img/window.png")
+.easy-setup__icon--window::before
+	background-image: url("../img/window.png")
 
 .faq-section
-	padding: 80px 30px 20px
-	&--gray
-		background-color: #eff4f4
-	&__title
-		margin-bottom: 25px
-	&__faq
-		margin: 62px 0 22px
+	padding: 55px 30px 20px
+	+media-xs
+		padding: 45px 15px 25px
 
-.section
-	padding: 80px 30px 20px
-	&--gray
-		background-color: #eff4f4
-	&__text
-		margin-bottom: 15px
-		max-width: 768px
-	&__banner
-		padding-top: 175px
-	&__buttons
-		margin-top: 55px
-		margin-bottom: 45px
-		& > *
-			margin-right: 20px
+.faq-section--gray
+	background-color: #eff4f4
 
+.faq-section__title
+	margin-bottom: 25px
 
-.faq
-	&__list
-		display: flex
-		flex-direction: row
-		flex-wrap: wrap
-		margin: 0
-		padding: 0
-		list-style: none
-	&__item
-		position: relative
-		max-width: 815px
-		width: 100%
-		padding-left: 40px
-		&::before
-			position: absolute
-			top: 14px
-			left: 1px
-			display: block
-			width: 8px
-			height: 8px
-			content: ""
-			background-color: #3b4269
-			border-radius: 50%
-	&__title
-		display: block
-		margin-bottom: 10px
-		font-weight: 400
-		font-size: 24px
-		line-height: 1.5
-		letter-spacing: 0
-		text-decoration: underline
-		color: #0da088
-	&__desc
-		margin: 10px 0 45px
-		font-weight: 400
-		font-size: 16px
-		line-height: 1.25
-		letter-spacing: 0.4px
-		color: #74757b
+.faq-section__text
+	margin-bottom: 45px
+
+.faq-section__faq
+	margin: 62px 0 22px
+	+media-xs
+		margin: 45px 0 15px
+
+.faq__list
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	margin: 0
+	padding: 0
+	list-style: none
+
+.faq__item
+	position: relative
+	max-width: 815px
+	width: 100%
+	padding-left: 40px
+	+media-xs
+		padding-left: 0
+
+.faq__item::before
+	position: absolute
+	top: 14px
+	left: 1px
+	display: block
+	width: 8px
+	height: 8px
+	content: ""
+	background-color: #3b4269
+	border-radius: 50%
+	+media-xs
+		content: unset
+
+.faq__title
+	display: block
+	margin-bottom: 10px
+	font-weight: 400
+	font-size: 24px
+	line-height: 1.5
+	letter-spacing: 0
+	text-decoration: underline
+	color: #0da088
+	+media-xs
+		margin-bottom: 5px
+		font-size: 18px
+
+.faq__desc
+	margin: 10px 0 45px
+	font-weight: 400
+	font-size: 16px
+	line-height: 1.25
+	letter-spacing: 0.4px
+	color: #74757b
+	+media-xs
+		margin: 5px 0 20px
+		font-size: 14px
 
 .finish-setup
 	padding: 65px 30px 50px
-	&--gray
-		background-color: #eff4f4
-	&__title
-		margin-bottom: 17px
-	&__text
+	+media-xs
+		padding: 45px 15px 25px
+
+.finish-setup--gray
+	background-color: #eff4f4
+
+.finish-setup__title
+	margin-bottom: 17px
+
+.finish-setup__text
+	margin-bottom: 15px
+
+.finish-setup__steps
+	margin: 60px 0 75px
+	padding: 0
+	display: block
+	list-style: none
+	+media-xs
+		margin: 45px 0 40px
+
+.finish-setup__button
+	min-width: 266px
+	margin-right: 20px
+	margin-bottom: 20px
+
+.finish-setup__step
+	display: flex
+	align-items: center
+	min-height: 75px
+	margin-bottom: 30px
+	padding-bottom: 5px;
+	font-weight: 400
+	font-size: 18px
+	line-height: 1
+	letter-spacing: 0.04px
+	+media-xs
+		flex-direction: column
+		align-items: unset
 		margin-bottom: 15px
-	&__steps
-		margin: 60px 0 75px
-		padding: 0
+		min-height: 50px
+		font-size: 14px
+
+.finish-setup__num
+	display: inline-block
+	margin-top: -2px
+	margin-right: 8px
+	font-weight: 700
+	font-size: 24px
+	line-height: 1
+	letter-spacing: 0.075px
+	white-space: nowrap
+	+media-xs
 		display: block
-		list-style: none
-		counter-reset: step
-	&__button
-		min-width: 266px
-		margin-right: 20px
-		margin-bottom: 20px
-	&__step
-		display: flex
-		align-items: center
-		min-height: 75px
-		margin-bottom: 30px
-		padding-bottom: 5px;
-		font-weight: 400
+		margin: 0
 		font-size: 18px
-		line-height: 1
-		letter-spacing: 0.04px
-		&::before
-			display: inline-block
-			margin-top: -2px
-			margin-right: 8px
-			font-weight: 700
-			font-size: 24px
-			line-height: 1
-			letter-spacing: 0.075px
-			counter-increment: step
-			content: "Шаг " counter(step) "."
-			white-space: nowrap
+		line-height: 1.5
 
-	&__icon
-		position: relative
-		padding-left: 110px
-		@media (min-width: 320px) and (max-width: 640px)
-			padding-left: 0
+.finish-setup__icon
+	position: relative
+	padding-left: 110px
+	+media-xs
+		padding-left: 0
 
-	&__icon::after
-		position: absolute
-		top: 0
-		left: 0
-		display: block
-		width: 74px
-		height: 74px
-		content: ""
-		background-color: #2cd3b8
-		background-position: center
-		background-repeat: no-repeat
-		border-radius: 50%
-		@media (min-width: 320px) and (max-width: 640px)
-			display: none
+.finish-setup__icon::after
+	position: absolute
+	top: 0
+	left: 0
+	display: block
+	width: 74px
+	height: 74px
+	content: ""
+	background-color: #2cd3b8
+	background-position: center
+	background-repeat: no-repeat
+	border-radius: 50%
+	+media-xs
+		display: none
 
-	&__icon--add-user::after
-		background-image: url("../img/add-user.png")
-		background-size: 35px 25px
-	&__icon--arrow::after
-		background-image: url("../img/arrow.png")
-		background-size: 29px 23px
-	&__icon--cogs::after
-		background-image: url("../img/cogs.png")
-		background-size: 36px
-	&__icon--webin::after
-		background-image: url("../img/webin.png")
-		background-size: 40px 26px
-	&__icon--manager::after
-		background-image: url("../img/manager.png")
-		background-size: 32px 37px
-	&__icon--screen::after
-		background-image: url("../img/screen.png")
-		background-size: 32px 29px
+.finish-setup__icon--add-user::after
+	background-image: url("../img/add-user.png")
+	background-size: 35px 25px
+
+.finish-setup__icon--arrow::after
+	background-image: url("../img/arrow.png")
+	background-size: 29px 23px
+
+.finish-setup__icon--cogs::after
+	background-image: url("../img/cogs.png")
+	background-size: 36px
+
+.finish-setup__icon--webin::after
+	background-image: url("../img/webin.png")
+	background-size: 40px 26px
+
+.finish-setup__icon--manager::after
+	background-image: url("../img/manager.png")
+	background-size: 32px 37px
+
+.finish-setup__icon--screen::after
+	background-image: url("../img/screen.png")
+	background-size: 32px 29px
 
 .contact
 	padding: 60px 30px 20px
-	&__text
-		margin-bottom: 15px
-		max-width: 650px
-		font-weight: 400
-		font-size: 18px
-		line-height: 1.35
-		letter-spacing: normal
-		color: #393e6b
-	&__links
-		display: flex
-		flex-direction: row
-		flex-wrap: wrap
-		margin: 70px 0 10px
-	&__link
-		display: flex
-		max-width: 30%
-		flex-basis: 30%
-		margin-right: 5%
-		font-weight: 400
-		font-size: 18px
-		line-height: 1.35
-		text-decoration: underline
-		color: #0da088
+	+media-xs
+		padding: 45px 15px 25px
 
-		&--footer-mail
-			font-weight: 400
-			font-size: 16px
-			line-height: 1.5
-			text-decoration: none
-			letter-spacing: 0.16px
-			color: #ffffff
-		@media (max-width: 640px)
-			max-width: 100%
-			flex-basis: 100%
+.contact__text
+	margin-bottom: 15px
+	max-width: 650px
+	font-weight: 400
+	font-size: 18px
+	line-height: 1.35
+	letter-spacing: normal
+	color: #393e6b
 
-		@media (min-width: 640px) and (max-width: 1023px)
-			max-width: 45%
-			flex-basis: 45%
-			margin-right: 5%
+.contact__links
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	margin: 70px 0 10px
+	+media-xs
+		margin: 45px 0
 
-		@media (min-width: 1024px)
-			&:nth-of-type(3n)
-				margin-right: 0
+.contact__link
+	display: flex
+	flex-basis: 33.33333333%
+	max-width: 33.33333333%
+	padding-right: 1.5rem
+	font-weight: 400
+	font-size: 18px
+	line-height: 1.35
+	text-decoration: underline
+	color: #0da088
+	+media-xs
+		max-width: 100%
+		flex-basis: 100%
+	+media-sm
+		max-width: 50%
+		flex-basis: 50%
 
-	&__icon
-		position: relative
-		margin-bottom: 30px
-		padding-top: 6px
-		padding-left: 70px
-		min-height: 55px
-		&::before
-			position: absolute
-			top: 1px
-			left: 0
-			display: block
-			width: 40px
-			height: 40px
-			content: ""
-			background-repeat: no-repeat
-			background-position: center
-			background-size: 40px
-		&--share::before
-			left: 4px
-			background-image: url("../img/link-share.png")
-		&--arrow::before
-			background-image: url("../img/link-arrow.png")
-		&--mobile::before
-			background-image: url("../img/link-mobile.png")
-		&--message::before
-			left: 4px
-			background-image: url("../img/link-message.png")
-		&--cube::before
-			background-image: url("../img/link-cube.png")
-			background-size: 37px 40px
-		&--mail::before
-			background-image: url("../img/link-mail.png")
-		&--bot::before
-			left: 4px
-			background-image: url("../img/link-bot.png")
+.contact__link--footer-mail
+	font-weight: 400
+	font-size: 16px
+	line-height: 1.5
+	text-decoration: none
+	letter-spacing: 0.16px
+	color: #ffffff
+
+.contact__icon
+	position: relative
+	margin-bottom: 30px
+	padding-top: 6px
+	padding-left: 70px
+	min-height: 55px
+	+media-xs
+		margin-bottom: 25px
+		padding-left: 65px
+		min-height: 45px
+	+media-md
+		padding-left: 55px
+
+.contact__icon::before
+	position: absolute
+	top: 1px
+	left: 0
+	display: block
+	width: 40px
+	height: 40px
+	content: ""
+	background-repeat: no-repeat
+	background-position: center
+	background-size: 40px
+
+.contact__icon--share::before
+	background-image: url("../img/link-share.png")
+	+media-xl
+		left: 4px
+
+.contact__icon--arrow::before
+	background-image: url("../img/link-arrow.png")
+
+.contact__icon--mobile::before
+	background-image: url("../img/link-mobile.png")
+
+.contact__icon--message::before
+	background-image: url("../img/link-message.png")
+	+media-xl
+		left: 4px
+
+.contact__icon--cube::before
+	background-image: url("../img/link-cube.png")
+	background-size: 37px 40px
+
+.contact__icon--mail::before
+	background-image: url("../img/link-mail.png")
+
+.contact__icon--bot::before
+	background-image: url("../img/link-bot.png")
+	+media-xl
+		left: 4px
 
 

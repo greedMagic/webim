@@ -10,9 +10,9 @@
     <link rel="stylesheet" media="all" href="css/app.css" />
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   </head>
-  <body class="page">
+  <body>
     <!-- BEGIN content -->
-    <div class="page__wrap">
+    <div class="wrapper">
       <header class="header header--fixed">
         <nav class="header__nav">
           <div class="header__menu menu">
@@ -44,13 +44,13 @@
             </div>
           </div>
           <a class="header__logo logo logo__link" href="#">
-            <img class="logo__pic" src="img/logo-header.png" alt="Логотип Webim">
+            <img class="logo__img" src="img/logo-header.png" alt="Логотип Webim">
           </a>
         </nav>
       </header>
       <section class="banner banner--gray">
         <div class="container">
-          <h1 class="banner__title title title--big">Установка webim</h1>
+          <h1 class="banner__title title">Установка webim</h1>
           <p class="banner__text text"> Установка онлайн-консультанта Webim на ваш сайт не займет много времени. <br> Вы можете установить онлайн-консультант Webim на ваш сайт и протестировать его в течение 7 дней бесплатно. </p>
           <a class="banner__button button button--green" href="#">Попробовать бесплатно</a>
           <a class="banner__button button" href="#">Тарифы</a>
@@ -138,12 +138,18 @@
           <h1 class="finish-setup__title title">Что вас ждет после установки</h1>
           <p class="finish-setup__text text">Идейные соображения высшего порядка, а также сложившаяся структура организации позволяет</p>
           <ul class="finish-setup__steps">
-            <li class="finish-setup__step finish-setup__icon finish-setup__icon--add-user">Создание учетной записи компании и администратора</li>
-            <li class="finish-setup__step finish-setup__icon finish-setup__icon--arrow">Активация учетной записи</li>
-            <li class="finish-setup__step finish-setup__icon finish-setup__icon--cogs">Начальная настройка</li>
-            <li class="finish-setup__step finish-setup__icon finish-setup__icon--webin"> Установка кнопки Webim на сайт</li>
-            <li class="finish-setup__step finish-setup__icon finish-setup__icon--manager">Регистрация оператора</li>
-            <li class="finish-setup__step finish-setup__icon finish-setup__icon--screen">Тест сервиса</li>
+            <li class="finish-setup__step finish-setup__icon finish-setup__icon--add-user">
+              <span class="finish-setup__num">Шаг 1.</span> Создание учетной записи компании и администратора </li>
+            <li class="finish-setup__step finish-setup__icon finish-setup__icon--arrow">
+              <span class="finish-setup__num">Шаг 2.</span> Активация учетной записи </li>
+            <li class="finish-setup__step finish-setup__icon finish-setup__icon--cogs">
+              <span class="finish-setup__num">Шаг 3.</span> Начальная настройка </li>
+            <li class="finish-setup__step finish-setup__icon finish-setup__icon--webin">
+              <span class="finish-setup__num">Шаг 4.</span> Установка кнопки Webim на сайт </li>
+            <li class="finish-setup__step finish-setup__icon finish-setup__icon--manager">
+              <span class="finish-setup__num">Шаг 5.</span> Регистрация оператора </li>
+            <li class="finish-setup__step finish-setup__icon finish-setup__icon--screen">
+              <span class="finish-setup__num">Шаг 6.</span> Тест сервиса </li>
           </ul>
           <a class="finish-setup__button button button--green" href="#">Все возможности Webim</a>
           <a class="finish-setup__button button button--blue" href="#">Протестировать бесплатно</a>
@@ -165,42 +171,41 @@
       </section>
       <footer class="footer">
         <div class="footer__wrap">
-          <div class="footer__col">
+          <div class="footer__col footer__copyright">
             <a class="footer__logo logo logo__link" href="#">
-              <img class="logo__pic" src="img/logo-footer.png" alt="Логотип Webim">
+              <img class="logo__img" src="img/logo-footer.png" alt="Логотип Webim">
             </a>
-            <span class="footer__copyright copyright"> Webim 2008-2017 <br> Все права защищены </span>
+            <span class="copyright"> Webim 2008-2017 <br> Все права защищены </span>
           </div>
-          <div class="footer__col footer__telephone">
-            <div class="telephone">
-              <a class="telephone__link telephone__link--big telephone__icon link" href="#">+7 (800) 500-49-32</a>
+          <div class="footer__col footer__phone">
+            <div class="phone">
+              <a class="phone__link phone__link--big phone__icon link" href="#">+7 (800) 500-49-32</a>
             </div>
-            <div class="telephone">
-              <a class="telephone__link link" href="#">+7 (499) 322-37-54</a>
-              <span class="telephone__desc">Москва, Серебряническая набережная, 29</span>
+            <div class="phone">
+              <a class="phone__link link" href="#">+7 (499) 322-37-54</a>
+              <span class="phone__desc">Москва, Серебряническая набережная, 29</span>
             </div>
-            <div class="telephone">
-              <a class="telephone__link link" href="#">+7 (812) 385-53-37</a>
-              <span class="telephone__desc">Санкт-Петербург, Чкаловский проспект, 15</span>
+            <div class="phone">
+              <a class="phone__link link" href="#">+7 (812) 385-53-37</a>
+              <span class="phone__desc">Санкт-Петербург, Чкаловский проспект, 15</span>
             </div>
           </div>
           <div class="footer__col footer__info">
-            <a class="footer__link link link__mail" href="mail:contact@webim.ru">contact@webim.ru</a>
+            <a class="footer__link link" href="mail:contact@webim.ru">contact@webim.ru</a>
             <br>
-            <a class="footer__link link link__mail" href="mail:sales@webim.ru">sales@webim.ru</a>
-            <br>
+            <a class="footer__link link" href="mail:sales@webim.ru">sales@webim.ru</a>
             <span class="footer__week">понедельник - пятница с 10.00 - 18.00</span>
             <div class="socials">
-              <a class="link social social__icon social__icon--vk" href="#">
+              <a class="social social__icon social__icon--vk" href="#">
                 <span class="visually-hidden">Vk</span>
               </a>
-              <a class="link social social__icon social__icon--fb" href="#">
+              <a class="social social__icon social__icon--fb" href="#">
                 <span class="visually-hidden">Fb</span>
               </a>
-              <a class="link social social__icon social__icon--tw" href="#">
+              <a class="social social__icon social__icon--tw" href="#">
                 <span class="visually-hidden">Tw</span>
               </a>
-              <a class="link social social__icon social__icon--skype" href="#">
+              <a class="social social__icon social__icon--skype" href="#">
                 <span class="visually-hidden">Skype</span>
               </a>
             </div>
